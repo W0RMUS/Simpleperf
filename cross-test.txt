@@ -1,0 +1,59 @@
+Difference between Simpleperf and iperf when running a 100s test with 1s intervals
+between h1 and h4. You can see that the rate jumps between 5Mbps and 30Mbps.
+This means that when I am running the default 25 second tests, the average
+could be either 30Mbps or 5Mbps, and I have experienced both. This makes
+it a lot harder to draw conclusions based on the average bandwidth.
+
+Simpleperf:
+10.0.5.2:8088    0.00 - 1.00      0.826 MB        6.61 Mbps
+10.0.5.2:8088    1.00 - 2.00      0.486 MB        3.89 Mbps
+10.0.5.2:8088    2.00 - 3.00      0.458 MB        3.66 Mbps
+10.0.5.2:8088    3.00 - 4.00      0.565 MB        4.52 Mbps
+10.0.5.2:8088    4.00 - 5.00      0.549 MB        4.39 Mbps
+10.0.5.2:8088    5.00 - 6.00      2.431 MB       19.45 Mbps
+10.0.5.2:8088    6.00 - 7.00      4.231 MB       33.85 Mbps
+10.0.5.2:8088    7.00 - 8.00      4.059 MB       32.47 Mbps
+10.0.5.2:8088    8.00 - 9.00      3.549 MB       28.39 Mbps
+10.0.5.2:8088   9.00 - 10.00      3.569 MB       28.55 Mbps
+10.0.5.2:8088   10.00 - 11.00     3.569 MB       28.55 Mbps
+10.0.5.2:8088   11.00 - 12.00     3.574 MB       28.59 Mbps
+10.0.5.2:8088   12.00 - 13.00     3.578 MB       28.62 Mbps
+...
+10.0.5.2:8088   74.00 - 75.00     3.802 MB       30.42 Mbps   
+10.0.5.2:8088   75.00 - 76.00     3.561 MB       28.49 Mbps
+10.0.5.2:8088   76.00 - 77.00     3.565 MB       28.52 Mbps
+10.0.5.2:8088   77.00 - 78.00     3.569 MB       28.55 Mbps
+10.0.5.2:8088   78.00 - 79.00     3.617 MB       28.94 Mbps
+10.0.5.2:8088   79.00 - 80.00     3.563 MB       28.50 Mbps
+10.0.5.2:8088   80.00 - 81.00     0.747 MB        5.98 Mbps
+10.0.5.2:8088   81.00 - 82.00     0.386 MB        3.09 Mbps
+10.0.5.2:8088   82.00 - 83.00     0.823 MB        6.58 Mbps
+10.0.5.2:8088   83.00 - 84.00     0.557 MB        4.46 Mbps
+10.0.5.2:8088   84.00 - 85.00      0.39 MB        3.12 Mbps
+10.0.5.2:8088   85.00 - 86.00     0.228 MB        1.82 Mbps
+10.0.5.2:8088   86.00 - 87.00     0.385 MB        3.08 Mbps
+10.0.5.2:8088   87.00 - 88.00     0.223 MB        1.78 Mbps
+10.0.5.2:8088   88.00 - 89.00     0.291 MB        2.33 Mbps
+10.0.5.2:8088   89.00 - 90.00     0.219 MB        1.75 Mbps
+
+iperf:
+[  1] 70.0000-71.0000 sec   573 KBytes  4.69 Mbits/sec
+[  1] 71.0000-72.0000 sec   509 KBytes  4.17 Mbits/sec
+[  1] 72.0000-73.0000 sec   637 KBytes  5.22 Mbits/sec
+[  1] 73.0000-74.0000 sec   508 KBytes  4.16 Mbits/sec
+[  1] 74.0000-75.0000 sec  1.25 MBytes  10.5 Mbits/sec
+[  1] 75.0000-76.0000 sec  2.04 MBytes  17.2 Mbits/sec
+[  1] 76.0000-77.0000 sec  2.88 MBytes  24.1 Mbits/sec
+[  1] 77.0000-78.0000 sec  3.75 MBytes  31.5 Mbits/sec
+[  1] 78.0000-79.0000 sec  2.75 MBytes  23.1 Mbits/sec
+[  1] 79.0000-80.0000 sec  3.75 MBytes  31.5 Mbits/sec
+[  1] 80.0000-81.0000 sec  3.75 MBytes  31.5 Mbits/sec
+[  1] 81.0000-82.0000 sec  2.75 MBytes  23.1 Mbits/sec
+[  1] 82.0000-83.0000 sec  1.51 MBytes  12.6 Mbits/sec
+[  1] 83.0000-84.0000 sec   634 KBytes  5.19 Mbits/sec
+[  1] 84.0000-85.0000 sec   446 KBytes  3.65 Mbits/sec
+[  1] 85.0000-86.0000 sec   253 KBytes  2.07 Mbits/sec
+[  1] 86.0000-87.0000 sec   768 KBytes  6.29 Mbits/sec
+[  1] 87.0000-88.0000 sec   377 KBytes  3.09 Mbits/sec
+[  1] 88.0000-89.0000 sec   701 KBytes  5.74 Mbits/sec
+[  1] 89.0000-90.0000 sec   254 KBytes  2.08 Mbits/sec

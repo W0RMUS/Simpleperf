@@ -1,0 +1,95 @@
+Server side Simpleperf:
+------------------------------------------------------------
+       A simpleperf server is listening on port 8088
+------------------------------------------------------------
+
+A simpleperf client with 10.0.1.1:49676 is connected with 10.0.1.2:8088
+
+      ID           Interval        Received          Rate
+     
+ 10.0.1.2:8088    0.0 - 25.25     116.683 MB      36.97 Mbps
+
+Client side Simpleperf:
+------------------------------------------------------------
+A simpleperf client connecting to server 10.0.1.2, port 8088
+------------------------------------------------------------
+
+Client connected with 10.0.1.2 port 8088
+
+ 10.0.1.2:8088    0.00 - 1.00      5.588 MB       44.70 Mbps   
+ 10.0.1.2:8088    1.00 - 2.00      4.606 MB       36.85 Mbps   
+ 10.0.1.2:8088    2.00 - 3.00      4.633 MB       37.06 Mbps   
+ 10.0.1.2:8088    3.00 - 4.00      4.647 MB       37.18 Mbps   
+ 10.0.1.2:8088    4.00 - 5.00      4.656 MB       37.25 Mbps   
+ 10.0.1.2:8088    5.00 - 6.00      4.618 MB       36.94 Mbps   
+ 10.0.1.2:8088    6.00 - 7.00       4.62 MB       36.96 Mbps   
+ 10.0.1.2:8088    7.00 - 8.00      4.634 MB       37.07 Mbps   
+ 10.0.1.2:8088    8.00 - 9.00      4.632 MB       37.06 Mbps   
+ 10.0.1.2:8088   9.00 - 10.00      4.628 MB       37.02 Mbps   
+ 10.0.1.2:8088   10.00 - 11.00     4.618 MB       36.94 Mbps   
+ 10.0.1.2:8088   11.00 - 12.00     4.607 MB       36.86 Mbps   
+ 10.0.1.2:8088   12.00 - 13.00     4.659 MB       37.27 Mbps   
+ 10.0.1.2:8088   13.00 - 14.00     4.599 MB       36.79 Mbps   
+ 10.0.1.2:8088   14.00 - 15.00     4.608 MB       36.86 Mbps   
+ 10.0.1.2:8088   15.00 - 16.00     4.639 MB       37.11 Mbps   
+ 10.0.1.2:8088   16.00 - 17.00      4.63 MB       37.04 Mbps   
+ 10.0.1.2:8088   17.00 - 18.00     4.661 MB       37.29 Mbps   
+ 10.0.1.2:8088   18.00 - 19.00     4.612 MB       36.90 Mbps   
+ 10.0.1.2:8088   19.00 - 20.00     4.617 MB       36.94 Mbps   
+ 10.0.1.2:8088   20.00 - 21.00     4.603 MB       36.82 Mbps   
+ 10.0.1.2:8088   21.00 - 22.00      4.68 MB       37.44 Mbps   
+ 10.0.1.2:8088   22.00 - 23.00     4.626 MB       37.01 Mbps   
+ 10.0.1.2:8088   23.00 - 24.00     4.623 MB       36.98 Mbps   
+ 10.0.1.2:8088   24.00 - 25.00     4.639 MB       37.11 Mbps   
+
+------------------------------------------------------------
+
+      ID           Interval        Transfer       Bandwidth
+   
+ 10.0.1.2:8088    0.0 - 25.27     116.683 MB      36.93 Mbps
+
+Server side iperf:
+------------------------------------------------------------
+Server listening on TCP port 5001
+TCP window size: 85.3 KByte (default)
+------------------------------------------------------------
+[  1] local 10.0.1.2 port 5001 connected with 10.0.1.1 port 50184
+[ ID] Interval       Transfer     Bandwidth
+[  1] 0.0000-25.5243 sec  71.4 MBytes  23.5 Mbits/sec
+
+
+Client side iperf:
+------------------------------------------------------------
+Client connecting to 10.0.1.2, TCP port 5001
+TCP window size: 85.3 KByte (default)
+------------------------------------------------------------
+[  1] local 10.0.1.1 port 50184 connected with 10.0.1.2 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  1] 0.0000-1.0000 sec  1.28 MBytes  10.8 Mbits/sec
+[  1] 1.0000-2.0000 sec  4.12 MBytes  34.6 Mbits/sec
+[  1] 2.0000-3.0000 sec  4.12 MBytes  34.6 Mbits/sec
+[  1] 3.0000-4.0000 sec  1.88 MBytes  15.8 Mbits/sec
+[  1] 4.0000-5.0000 sec  4.88 MBytes  40.9 Mbits/sec
+[  1] 5.0000-6.0000 sec  4.12 MBytes  34.6 Mbits/sec
+[  1] 6.0000-7.0000 sec  4.75 MBytes  39.8 Mbits/sec
+[  1] 7.0000-8.0000 sec  4.12 MBytes  34.6 Mbits/sec
+[  1] 8.0000-9.0000 sec  3.38 MBytes  28.3 Mbits/sec
+[  1] 9.0000-10.0000 sec  1.18 MBytes  9.92 Mbits/sec
+[  1] 10.0000-11.0000 sec  4.12 MBytes  34.5 Mbits/sec
+[  1] 11.0000-12.0000 sec  3.50 MBytes  29.4 Mbits/sec
+[  1] 12.0000-13.0000 sec  2.75 MBytes  23.1 Mbits/sec
+[  1] 13.0000-14.0000 sec   641 KBytes  5.25 Mbits/sec
+[  1] 14.0000-15.0000 sec  4.12 MBytes  34.6 Mbits/sec
+[  1] 15.0000-16.0000 sec  4.88 MBytes  40.9 Mbits/sec
+[  1] 16.0000-17.0000 sec  4.00 MBytes  33.6 Mbits/sec
+[  1] 17.0000-18.0000 sec  4.88 MBytes  40.9 Mbits/sec
+[  1] 18.0000-19.0000 sec  1.02 MBytes  8.56 Mbits/sec
+[  1] 19.0000-20.0000 sec   314 KBytes  2.57 Mbits/sec
+[  1] 20.0000-21.0000 sec   892 KBytes  7.31 Mbits/sec
+[  1] 21.0000-22.0000 sec  2.56 MBytes  21.4 Mbits/sec
+[  1] 22.0000-23.0000 sec  2.60 MBytes  21.8 Mbits/sec
+[  1] 23.0000-24.0000 sec   699 KBytes  5.73 Mbits/sec
+[  1] 24.0000-25.0000 sec   572 KBytes  4.69 Mbits/sec
+[  1] 25.0000-25.5578 sec   128 KBytes  1.88 Mbits/sec
+[  1] 0.0000-25.5578 sec  71.4 MBytes  23.4 Mbits/sec
+

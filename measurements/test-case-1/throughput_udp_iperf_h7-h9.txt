@@ -1,0 +1,13 @@
+root@markus-VirtualBox:/mnt/shared/simpleperf# iperf -u -c 10.0.7.2 -b 30M
+------------------------------------------------------------
+Client connecting to 10.0.7.2, UDP port 5001
+Sending 1470 byte datagrams, IPG target: 373.84 us (kalman adjust)
+UDP buffer size:  208 KByte (default)
+------------------------------------------------------------
+[  1] local 10.0.2.2 port 54857 connected with 10.0.7.2 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  1] 0.0000-10.0003 sec  37.5 MBytes  31.4 Mbits/sec
+[  1] Sent 26740 datagrams
+[  1] Server Report:
+[ ID] Interval       Transfer     Bandwidth        Jitter   Lost/Total Datagrams
+[  1] 0.0000-10.2275 sec  8.20 MBytes  6.72 Mbits/sec   4.051 ms 20891/26739 (78%)
